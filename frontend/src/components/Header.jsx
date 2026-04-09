@@ -29,7 +29,7 @@ const Header = () => {
       >
         {/* Top announcement bar */}
         <div className="bg-[#2C2A33] text-[#D4AF37] text-center text-xs py-2 tracking-widest uppercase font-medium">
-          Free Delivery on Orders Above ₹5,000 &nbsp;|&nbsp; Premium Festive Gifting
+          Bespoke Luxury Gifting &nbsp;|&nbsp; Festive · Corporate · Wedding · Trousseau · Bulk Orders
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,10 +1,14 @@
 # Barqat Luxury Gifting - Project PRD
 
-## Project Overview
-**Brand:** Barqat Luxury Gifting  
-**Type:** Premium e-commerce website for luxury Holi/festive gift hampers  
-**WhatsApp Number:** 919351306182  
-**Last Updated:** Feb 2026
+## Business Description
+**Barqat Luxury Gifting** — Bespoke luxury gifting, tailored to perfection.
+
+### 5 Core Services
+1. **Festive Gifting** — Holi, Diwali, Eid, Christmas, etc.
+2. **Corporate Gifting** — Branded bulk hampers for clients & teams
+3. **Wedding Favours** — Elegant personalised guest gifts
+4. **Trousseau Packing** — Regal bridal gift displays
+5. **Custom Bulk Orders** — 10 to 10,000 gifts, fully customised
 
 ---
 

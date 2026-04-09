@@ -2,53 +2,62 @@
 export const PRODUCTS = [
   {
     id: 1,
-    name: "Royal Holi Celebration Hamper",
+    name: "Royal Festive Celebration Hamper",
     price: 8499,
-    description: "A vibrant pink round basket brimming with festive Holi essentials — organic gulal, water balloon kit, pichkari, sweets, and decorative accessories. The perfect premium gift for a joyful celebration.",
+    description: "A vibrant, hand-assembled festive hamper in a luxurious pink basket — filled with organic gulal, artisan sweets, pichkari, decorative accessories and more. A bespoke treasure for every joyful celebration.",
     image: "https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/4jktw50b_Poduct%20%281%29.jpeg",
-    category: "Featured",
+    category: "Festive Gifting",
     badge: "Bestseller",
   },
   {
     id: 2,
-    name: "Golden Festive Tray Collection",
+    name: "Corporate Elegance Tray",
     price: 12999,
-    description: "An exquisite gold-trimmed rectangular tray adorned with colorful Holi items, decorative wheat stalks, organic colors, sweets, and festive accessories. Perfect for corporate and premium gifting.",
+    description: "An exquisite gold-trimmed rectangular tray curated for corporate gifting — tasteful, branded presentation with premium festive items, organic colors, sweets, and elegant accessories. Impress your clients and team.",
     image: "https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/qm2euvfg_Poduct%20%282%29.jpeg",
-    category: "Featured",
-    badge: "New Arrival",
+    category: "Corporate Gifting",
+    badge: "Corporate Pick",
   },
   {
     id: 3,
-    name: "Premium Holi Luxury Box",
+    name: "Bespoke Luxury Gift Box",
     price: 15499,
-    description: "A luxurious pink-and-gold woven basket overflowing with premium Holi items — natural juice, organic colors, pichkari, peacock feathers, and more. An opulent celebration of the festival of colors.",
+    description: "Our signature pink-and-gold woven basket — fully customizable, overflowing with premium curated items. Perfect for festive occasions, client appreciation, and any milestone worth celebrating in grand style.",
     image: "https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/0lrp8l59_Poduct%20%283%29.jpeg",
-    category: "Featured",
+    category: "Festive Gifting",
     badge: "Premium",
   },
   {
     id: 4,
-    name: "Mehndi Celebration Basket",
+    name: "Bridal Wedding Favour Basket",
     price: 6999,
-    description: "A charming yellow-green round basket on golden legs, filled with Holi essentials — colorful pichkari, organic gulal, peacock feather decor, sweets, and jute flower embellishments.",
+    description: "A charming hand-crafted basket on golden legs — thoughtfully styled for wedding favours and bridal gifting. Adorned with jute florals, peacock feathers, and curated keepsakes for your special guests.",
     image: "https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/0wp3cmoq_Poduct%20%284%29.jpeg",
-    category: "Featured",
-    badge: null,
+    category: "Wedding Favours",
+    badge: "Bridal Collection",
   },
   {
     id: 5,
-    name: "Heritage Holi Grand Hamper",
+    name: "Heritage Trousseau Grand Hamper",
     price: 19999,
-    description: "Our most grand offering — a beautifully woven natural round basket carrying an opulent collection of Holi essentials, dried botanicals, tassels, peacock feathers, and curated artisan gifts.",
+    description: "Our grandest offering — a beautifully woven natural basket crafted for trousseau packing and grand gifting. Features dried botanicals, tassels, peacock feathers, and artisan treasures, exuding heirloom luxury.",
     image: "https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/9l05ebp9_Poduct%20%285%29.jpeg",
-    category: "Featured",
+    category: "Trousseau Packing",
     badge: "Grand Edition",
   },
+];
+
+export const CATEGORIES = [
+  "All",
+  "Festive Gifting",
+  "Corporate Gifting",
+  "Wedding Favours",
+  "Trousseau Packing",
+  "Custom Bulk Orders",
 ];
 
 export const formatPrice = (price) =>
   `₹${price.toLocaleString("en-IN")}`;
 
-// WhatsApp business number — replace with your actual number if needed
+// WhatsApp business number
 export const WHATSAPP_NUMBER = "919351306182";

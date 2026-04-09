@@ -16,7 +16,7 @@ const Footer = () => {
               className="h-14 w-auto object-contain mb-4"
             />
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Crafting premium festive hampers and luxury gift collections for every celebration. Where tradition meets elegance.
+              Bespoke luxury gifting, tailored to perfection — festive hampers, corporate gifts, wedding favours, trousseau packing and custom bulk orders.
             </p>
             <div className="flex gap-3">
               <a
@@ -69,10 +69,16 @@ const Footer = () => {
           {/* Categories */}
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold mb-5">
-              Categories
+              Our Services
             </h4>
             <ul className="space-y-3">
-              {["Holi Hampers", "Diwali Collection", "Corporate Gifting", "Wedding Gifting", "Custom Hampers"].map((cat) => (
+              {[
+                "Festive Gifting",
+                "Corporate Gifting",
+                "Wedding Favours",
+                "Trousseau Packing",
+                "Custom Bulk Orders",
+              ].map((cat) => (
                 <li key={cat}>
                   <span className="text-gray-400 text-sm hover:text-[#D4AF37] transition-colors cursor-pointer">
                     {cat}

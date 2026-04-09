@@ -30,7 +30,7 @@ const ContactPage = () => {
             <div className="h-px w-16 bg-[#D4AF37]" />
           </div>
           <p className="text-gray-400 text-base max-w-lg mx-auto">
-            Questions, bulk orders, or custom requests? We'd love to hear from you.
+            Questions about our gifting services? We'd love to create something extraordinary for you.
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ const ContactPage = () => {
             <div data-testid="contact-whatsapp-cta" className="bg-[#2C2A33] border border-[#3A3843] p-6">
               <h3 className="font-serif text-lg text-white mb-2">Prefer a Quick Chat?</h3>
               <p className="text-gray-400 text-sm mb-4">
-                For bulk orders, corporate gifting, or urgent inquiries — reach us instantly on WhatsApp.
+                For bespoke orders, corporate gifting, wedding favours, or trousseau packing — reach us instantly on WhatsApp.
               </p>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Barqat! I have an inquiry about your gifting services.")}`}
@@ -157,12 +157,14 @@ const ContactPage = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-[#3A3843] text-sm text-gray-300 outline-none focus:border-[#D4AF37] bg-[#2C2A33] transition-colors"
                   >
-                    <option value="">Select a subject</option>
+                    <option value="">Select a service</option>
+                    <option>Festive Gifting</option>
+                    <option>Corporate Gifting</option>
+                    <option>Wedding Favours</option>
+                    <option>Trousseau Packing</option>
+                    <option>Custom Bulk Orders</option>
                     <option>General Inquiry</option>
-                    <option>Bulk / Corporate Order</option>
-                    <option>Custom Hamper Request</option>
                     <option>Order Tracking</option>
-                    <option>Product Information</option>
                   </select>
                 </div>
 
