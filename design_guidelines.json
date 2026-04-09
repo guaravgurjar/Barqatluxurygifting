@@ -1,0 +1,154 @@
+{
+  "theme": "light",
+  "archetype": "5 (Jewel & Luxury - Light Variant)",
+  "brand": {
+    "name": "Barqat Luxury Gifting",
+    "tone": "Luxurious, elegant, trustworthy, festive yet refined"
+  },
+  "colors": {
+    "background_primary": "#FFFFFF",
+    "background_secondary": "#FAFAFA",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "primary": "#7F1D1D",
+    "primary_hover": "#991B1B",
+    "secondary": "#1E3A8A",
+    "accent_gold": "#D4AF37",
+    "whatsapp_green": "#25D366",
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "strategies": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-medium text-slate-900",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-medium text-slate-900",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "body": "text-base leading-relaxed text-slate-600",
+      "overline": "uppercase text-xs tracking-[0.2em] font-bold text-[#D4AF37]"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 lg:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8",
+    "product_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
+  },
+  "components": {
+    "header": {
+      "style": "sticky top-0 z-50 w-full backdrop-blur-xl bg-white/80 border-b border-slate-200 transition-all",
+      "navigation": "hidden md:flex items-center gap-8 text-sm font-medium",
+      "actions": "flex items-center gap-4"
+    },
+    "hero": {
+      "style": "relative min-h-[80vh] flex items-center bg-[#FAFAFA] overflow-hidden",
+      "layout": "grid md:grid-cols-2 gap-12 items-center",
+      "image_treatment": "w-full h-[60vh] md:h-[80vh] object-cover rounded-none"
+    },
+    "product_card": {
+      "wrapper": "group relative flex flex-col cursor-pointer",
+      "image_container": "relative aspect-[4/5] overflow-hidden bg-slate-100",
+      "image": "object-cover w-full h-full transition-transform duration-700 group-hover:scale-105",
+      "content": "pt-6 text-center",
+      "title": "text-lg font-medium text-slate-900 mb-2 font-serif",
+      "price": "text-slate-600 font-medium",
+      "button": "mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full bg-[#1E3A8A] text-white py-3 uppercase tracking-wider text-sm hover:bg-[#1e3a8a]/90"
+    },
+    "buttons": {
+      "primary": "inline-flex items-center justify-center px-8 py-4 bg-[#7F1D1D] text-white text-sm uppercase tracking-widest font-medium hover:bg-[#991B1B] transition-colors",
+      "secondary": "inline-flex items-center justify-center px-8 py-4 border border-[#7F1D1D] text-[#7F1D1D] text-sm uppercase tracking-widest font-medium hover:bg-slate-50 transition-colors",
+      "whatsapp": "inline-flex items-center justify-center w-full px-8 py-4 bg-[#25D366] text-white text-sm uppercase tracking-widest font-bold hover:bg-[#20bd5a] transition-colors gap-2"
+    },
+    "cart_sidebar": {
+      "style": "fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl flex flex-col",
+      "overlay": "fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+    },
+    "modals": {
+      "style": "bg-white p-8 max-w-md w-full mx-auto relative shadow-2xl border border-slate-100"
+    }
+  },
+  "pages": {
+    "home": {
+      "sections": [
+        "Hero Banner (Text left, image right)",
+        "Featured Hampers (Grid of 5 products)",
+        "Why Choose Us (Bento layout with brand values)",
+        "Testimonials (Minimal text quotes)"
+      ]
+    },
+    "all_products": {
+      "layout": "Header with page title 'The Festive Collection', followed by product grid"
+    },
+    "about_us": {
+      "layout": "Editorial split-screen layout detailing brand story, heritage, and craftsmanship"
+    },
+    "contact": {
+      "layout": "Minimalist contact form + direct WhatsApp CTA for bulk/corporate orders"
+    }
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.pexels.com/photos/36805311/pexels-photo-36805311.jpeg",
+      "alt": "Barqat luxury hexagonal gift box"
+    },
+    "about_image": {
+      "url": "https://images.unsplash.com/photo-1759563871370-692ab3de97ed",
+      "alt": "Luxury gift box and card on white fabric"
+    },
+    "products": [
+      {
+        "id": "p1",
+        "name": "The Royal Gulal Hamper",
+        "price": "₹4,500",
+        "image": "https://images.unsplash.com/photo-1770999131111-590d9eaadcdb",
+        "description": "Premium organic holi colors packed in elegant glass jars."
+      },
+      {
+        "id": "p2",
+        "name": "Barqat Festive Sweet Box",
+        "price": "₹3,200",
+        "image": "https://images.unsplash.com/photo-1699708263762-00ca477760bd",
+        "description": "Artisanal Indian sweets crafted with pure ghee and dry fruits."
+      },
+      {
+        "id": "p3",
+        "name": "The Imperial Celebration Trunk",
+        "price": "₹8,500",
+        "image": "https://images.unsplash.com/photo-1759563874663-5e59a4bbb7b5",
+        "description": "An opulent trunk featuring colors, sweets, and golden thali."
+      },
+      {
+        "id": "p4",
+        "name": "Vibrant Hues Hamper",
+        "price": "₹2,800",
+        "image": "https://images.unsplash.com/photo-1764959485498-ea69e96c9b75",
+        "description": "A vibrant assortment of safe, skin-friendly colorful powders."
+      },
+      {
+        "id": "p5",
+        "name": "Emerald Signature Box",
+        "price": "₹5,000",
+        "image": "https://images.pexels.com/photos/19791015/pexels-photo-19791015.jpeg",
+        "description": "Signature white box with emerald ribbon, perfect for corporate gifting."
+      }
+    ]
+  },
+  "interactions": {
+    "hover": "Smooth scale on images, fade-in on product buttons",
+    "scroll": "Parallax effect on hero image, staggered fade-in for product grid",
+    "cart": "Slide-in from right with background blur overlay"
+  },
+  "accessibility": {
+    "contrast": "Ensure white text on maroon/navy meets WCAG AA standards. Use text-slate-900 for high-contrast body.",
+    "testing": "All interactive elements MUST include data-testid (e.g., data-testid='add-to-cart-button')"
+  },
+  "instructions_to_main_agent": [
+    "Use pure HTML and Tailwind CSS for the marketing layout and hero sections. Do NOT use Shadcn Card component for product layouts to ensure maximum layout freedom.",
+    "Use Shadcn Sheet for the Slide-out cart.",
+    "Use Shadcn Dialog for the Login/Register modals.",
+    "Use Lucide React for icons (e.g., ShoppingBag, Search, User, Menu).",
+    "Set font-family for body to 'Outfit' and headings to 'Cormorant Garamond'. Remember to import them from Google Fonts in index.css.",
+    "WhatsApp Checkout button MUST be prominent with the brand green color #25D366.",
+    "Implement a mobile-first responsive design. The grid should be 1 column on mobile, transitioning to 3 columns on large screens."
+  ]
+}
