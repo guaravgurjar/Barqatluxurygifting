@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import { PRODUCTS, CATEGORIES, WHATSAPP_NUMBER } from "../data/products";
+import { CATEGORIES, WHATSAPP_NUMBER } from "../data/products";
 import { MessageCircle } from "lucide-react";
+import { useProducts } from "../hooks/useProducts";
 
 const ProductsPage = () => {
+  const { products, loading } = useProducts();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [sortBy, setSortBy] = useState("default");
 
-  const filtered = PRODUCTS.filter((p) => {
+  const filtered = products.filter((p) => {
     const matchesSearch =
       p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.description.toLowerCase().includes(search.toLowerCase());
@@ -110,7 +112,17 @@ const ProductsPage = () => {
         </p>
 
         {/* Product Grid */}
-        {sorted.length > 0 ? (
+        {loading ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="flex flex-col gap-4">
+                <div className="aspect-[4/5] bg-[#2C2A33] animate-pulse" />
+                <div className="h-4 bg-[#2C2A33] animate-pulse w-3/4 mx-auto" />
+                <div className="h-4 bg-[#2C2A33] animate-pulse w-1/2 mx-auto" />
+              </div>
+            ))}
+          </div>
+        ) : sorted.length > 0 ? (
           <div
             data-testid="products-grid"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14"
@@ -119,7 +131,7 @@ const ProductsPage = () => {
               <ProductCard key={product.id} product={product} index={index} />
             ))}
           </div>
-        ) : (
+        ) : sorted.length === 0 ? (
           <div className="text-center py-24">
             <p className="text-3xl mb-4">🎁</p>
             <p className="text-gray-400 font-medium">No creations found</p>
@@ -131,7 +143,7 @@ const ProductsPage = () => {
               Show All
             </button>
           </div>
-        )}
+        ) : null}
 
         {/* Custom Order CTA */}
         <div className="mt-20 bg-[#2C2A33] border border-[#3A3843] p-10 text-center">

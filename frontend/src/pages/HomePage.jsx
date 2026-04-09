@@ -5,7 +5,8 @@ import {
   Gift, Briefcase, Heart, Package, ClipboardList, CheckCircle,
 } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import { PRODUCTS, WHATSAPP_NUMBER } from "../data/products";
+import { useProducts } from "../hooks/useProducts";
+import { WHATSAPP_NUMBER } from "../data/products";
 
 const SERVICES = [
   {
@@ -82,6 +83,7 @@ const Divider = () => (
 );
 
 const HomePage = () => {
+  const { products, loading } = useProducts();
   return (
     <div className="bg-[#1B1B1B]">
 
@@ -251,12 +253,18 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-            {PRODUCTS.slice(0, 3).map((product, index) => (
-              <ProductCard key={product.id} product={product} index={index} />
-            ))}
+            {loading ? (
+              [...Array(3)].map((_, i) => (
+                <div key={i} className="aspect-[4/5] bg-[#2C2A33] animate-pulse" />
+              ))
+            ) : (
+              products.slice(0, 3).map((product, index) => (
+                <ProductCard key={product.id} product={product} index={index} />
+              ))
+            )}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 mt-12 max-w-2xl mx-auto">
-            {PRODUCTS.slice(3).map((product, index) => (
+            {!loading && products.slice(3, 5).map((product, index) => (
               <ProductCard key={product.id} product={product} index={index + 3} />
             ))}
           </div>
