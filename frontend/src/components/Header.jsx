@@ -25,10 +25,10 @@ const Header = () => {
     <>
       <header
         data-testid="main-header"
-        className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-xl border-b border-slate-200 transition-all"
+        className="sticky top-0 z-50 w-full bg-[#1B1B1B]/95 backdrop-blur-xl border-b border-[#3A3843] transition-all"
       >
         {/* Top announcement bar */}
-        <div className="bg-[#2D1648] text-[#E8D5A3] text-center text-xs py-2 tracking-widest uppercase font-medium">
+        <div className="bg-[#2C2A33] text-[#D4AF37] text-center text-xs py-2 tracking-widest uppercase font-medium">
           Free Delivery on Orders Above ₹5,000 &nbsp;|&nbsp; Premium Festive Gifting
         </div>
 
@@ -52,8 +52,8 @@ const Header = () => {
                   to={link.path}
                   className={`text-sm font-medium transition-colors duration-200 uppercase tracking-wider ${
                     isActive(link.path)
-                      ? "text-[#2D1648] border-b-2 border-[#B8944C] pb-0.5"
-                      : "text-slate-700 hover:text-[#2D1648]"
+                      ? "text-[#D4AF37] border-b-2 border-[#D4AF37] pb-0.5"
+                      : "text-gray-300 hover:text-[#D4AF37]"
                   }`}
                 >
                   {link.label}
@@ -65,18 +65,18 @@ const Header = () => {
             <div className="flex items-center gap-3">
               {/* Search */}
               {searchOpen ? (
-                <div className="hidden md:flex items-center border border-slate-300 rounded-none overflow-hidden">
+                <div className="hidden md:flex items-center border border-[#3A3843] overflow-hidden bg-[#2C2A33]">
                   <input
                     data-testid="search-input"
                     autoFocus
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search hampers..."
-                    className="px-3 py-1.5 text-sm outline-none w-44 bg-white text-slate-800"
+                    className="px-3 py-1.5 text-sm outline-none w-44 bg-transparent text-[#E4E4DE] placeholder-gray-500"
                   />
                   <button
                     onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-                    className="px-2 py-1.5 text-slate-500 hover:text-[#2D1648]"
+                    className="px-2 py-1.5 text-gray-400 hover:text-[#D4AF37]"
                   >
                     <X size={16} />
                   </button>
@@ -85,7 +85,7 @@ const Header = () => {
                 <button
                   data-testid="search-btn"
                   onClick={() => setSearchOpen(true)}
-                  className="hidden md:flex text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
+                  className="hidden md:flex text-gray-300 hover:text-[#D4AF37] transition-colors p-1.5"
                   aria-label="Search"
                 >
                   <Search size={20} />
@@ -96,7 +96,7 @@ const Header = () => {
               <button
                 data-testid="auth-btn"
                 onClick={() => setAuthOpen(true)}
-                className="hidden md:flex items-center gap-1.5 text-sm text-slate-700 hover:text-[#2D1648] transition-colors font-medium"
+                className="hidden md:flex items-center gap-1.5 text-sm text-gray-300 hover:text-[#D4AF37] transition-colors font-medium"
               >
                 <User size={18} />
                 <span className="text-xs uppercase tracking-wider">Login</span>
@@ -106,14 +106,14 @@ const Header = () => {
               <button
                 data-testid="cart-btn"
                 onClick={() => setIsCartOpen(true)}
-                className="relative flex items-center text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
+                className="relative flex items-center text-gray-300 hover:text-[#D4AF37] transition-colors p-1.5"
                 aria-label="Open cart"
               >
                 <ShoppingBag size={22} />
                 {totalItems > 0 && (
                   <span
                     data-testid="cart-badge"
-                    className="absolute -top-1 -right-1 bg-[#2D1648] text-white text-[10px] font-bold rounded-full w-4.5 h-4.5 min-w-[18px] min-h-[18px] flex items-center justify-center leading-none px-1"
+                    className="absolute -top-1 -right-1 bg-[#D4AF37] text-[#1B1B1B] text-[10px] font-bold rounded-full min-w-[18px] min-h-[18px] flex items-center justify-center leading-none px-1"
                   >
                     {totalItems}
                   </span>
@@ -124,7 +124,7 @@ const Header = () => {
               <button
                 data-testid="mobile-menu-btn"
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="md:hidden text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
+                className="md:hidden text-gray-300 hover:text-[#D4AF37] transition-colors p-1.5"
                 aria-label="Toggle menu"
               >
                 {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -136,14 +136,13 @@ const Header = () => {
           {menuOpen && (
             <div
               data-testid="mobile-nav"
-              className="md:hidden border-t border-slate-100 py-4 flex flex-col gap-3 animate-fade-in"
+              className="md:hidden border-t border-[#3A3843] py-4 flex flex-col gap-3 animate-fade-in"
             >
-              {/* Mobile search */}
-              <div className="flex items-center border border-slate-300 mb-2">
-                <Search size={16} className="ml-3 text-slate-400" />
+              <div className="flex items-center border border-[#3A3843] mb-2 bg-[#2C2A33]">
+                <Search size={16} className="ml-3 text-gray-500" />
                 <input
                   placeholder="Search hampers..."
-                  className="px-3 py-2 text-sm outline-none flex-1 bg-white text-slate-800"
+                  className="px-3 py-2 text-sm outline-none flex-1 bg-transparent text-[#E4E4DE] placeholder-gray-500"
                 />
               </div>
               {navLinks.map((link) => (
@@ -151,10 +150,8 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`text-sm font-medium uppercase tracking-wider py-2 px-1 border-b border-slate-100 ${
-                    isActive(link.path)
-                      ? "text-[#2D1648]"
-                      : "text-slate-700"
+                  className={`text-sm font-medium uppercase tracking-wider py-2 px-1 border-b border-[#3A3843] ${
+                    isActive(link.path) ? "text-[#D4AF37]" : "text-gray-300"
                   }`}
                 >
                   {link.label}
@@ -162,7 +159,7 @@ const Header = () => {
               ))}
               <button
                 onClick={() => { setAuthOpen(true); setMenuOpen(false); }}
-                className="text-left text-sm font-medium uppercase tracking-wider py-2 px-1 text-slate-700"
+                className="text-left text-sm font-medium uppercase tracking-wider py-2 px-1 text-gray-300"
               >
                 Login / Register
               </button>

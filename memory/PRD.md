@@ -36,17 +36,19 @@ frontend/src/
 
 ---
 
-## Brand Colors (Logo-Based)
+## Brand Colors (Modern Dramatic - Palette #2)
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Deep Purple (Primary) | #2D1648 | Buttons, badges, dark sections, announcement bar |
-| Purple Hover | #3D2060 | Button hover states |
-| Champagne Cream | #E8D5A3 | Text/icons on dark backgrounds |
-| Medium Gold | #B8944C | Overlines, dividers, stars on light backgrounds |
+| Eerie Black (Background) | #1B1B1B | Main page backgrounds |
+| Charcoal Gray (Secondary) | #2C2A33 | Navigation sections, cards, alternating sections |
+| Metallic Gold (Accent) | #D4AF37 | CTAs, buttons, icons, overlines, stars |
+| Gold Hover | #B8941F | Button hover states |
+| Deep Purple (Highlight) | #2D1648 | Gradient accent in auth modal |
 | WhatsApp Green | #25D366 | WhatsApp CTA buttons |
-| Dark Purple BG | #1A0D2E | Why Choose Us section, footer |
-| White | #FFFFFF | Main backgrounds |
-| Off-white | #FAFAFA | Section backgrounds |
+| Dark Border | #3A3843 | Borders throughout |
+| Text Primary | #FFFFFF / #E4E4DE | Headings on dark backgrounds |
+| Text Secondary | #D1D5DB (gray-300) | Body text |
+| Text Muted | #9CA3AF (gray-400) | Muted descriptions |
 
 ---
 

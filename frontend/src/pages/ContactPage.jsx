@@ -3,13 +3,7 @@ import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
 import { WHATSAPP_NUMBER } from "../data/products";
 
 const ContactPage = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -18,32 +12,24 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Format message for WhatsApp
     const msg = `Hello Barqat!\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nSubject: ${form.subject}\n\nMessage:\n${form.message}`;
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
-      "_blank"
-    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
     setSubmitted(true);
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#1B1B1B] min-h-screen">
       {/* Page Header */}
-      <div className="bg-[#FAFAFA] border-b border-slate-200">
+      <div className="bg-[#2C2A33] border-b border-[#3A3843]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-3">
-            Reach Out
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-medium text-slate-900 mb-4">
-            Get in Touch
-          </h1>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">Reach Out</p>
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium text-white mb-4">Get in Touch</h1>
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-16 bg-[#B8944C]" />
-            <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
-            <div className="h-px w-16 bg-[#B8944C]" />
+            <div className="h-px w-16 bg-[#D4AF37]" />
+            <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
+            <div className="h-px w-16 bg-[#D4AF37]" />
           </div>
-          <p className="text-slate-500 text-base max-w-lg mx-auto">
+          <p className="text-gray-400 text-base max-w-lg mx-auto">
             Questions, bulk orders, or custom requests? We'd love to hear from you.
           </p>
         </div>
@@ -53,55 +39,26 @@ const ContactPage = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <h2 className="font-serif text-2xl font-medium text-slate-900 mb-6">
-              Contact Information
-            </h2>
-            <div className="h-0.5 w-12 bg-[#B8944C] mb-8" />
+            <h2 className="font-serif text-2xl font-medium text-white mb-6">Contact Information</h2>
+            <div className="h-0.5 w-12 bg-[#D4AF37] mb-8" />
 
             <div className="space-y-6 mb-10">
               {[
-                {
-                  icon: <Phone size={18} className="text-[#B8944C]" />,
-                  label: "Phone / WhatsApp",
-                  value: "+91 93513 06182",
-                  href: `tel:+${WHATSAPP_NUMBER}`,
-                },
-                {
-                  icon: <Mail size={18} className="text-[#B8944C]" />,
-                  label: "Email",
-                  value: "hello@barqatluxury.com",
-                  href: "mailto:hello@barqatluxury.com",
-                },
-                {
-                  icon: <MapPin size={18} className="text-[#B8944C]" />,
-                  label: "Location",
-                  value: "India — Pan India Delivery Available",
-                  href: null,
-                },
-                {
-                  icon: <Clock size={18} className="text-[#B8944C]" />,
-                  label: "Business Hours",
-                  value: "Monday – Saturday, 9 AM – 7 PM",
-                  href: null,
-                },
+                { icon: <Phone size={18} className="text-[#D4AF37]" />, label: "Phone / WhatsApp", value: "+91 93513 06182", href: `tel:+${WHATSAPP_NUMBER}` },
+                { icon: <Mail size={18} className="text-[#D4AF37]" />, label: "Email", value: "hello@barqatluxury.com", href: "mailto:hello@barqatluxury.com" },
+                { icon: <MapPin size={18} className="text-[#D4AF37]" />, label: "Location", value: "India — Pan India Delivery Available", href: null },
+                { icon: <Clock size={18} className="text-[#D4AF37]" />, label: "Business Hours", value: "Monday – Saturday, 9 AM – 7 PM", href: null },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4 items-start">
-                  <div className="w-10 h-10 border border-[#B8944C]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-10 h-10 border border-[#D4AF37]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500 font-medium mb-0.5">
-                      {item.label}
-                    </p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-medium mb-0.5">{item.label}</p>
                     {item.href ? (
-                      <a
-                        href={item.href}
-                        className="text-slate-800 text-sm font-medium hover:text-[#2D1648] transition-colors"
-                      >
-                        {item.value}
-                      </a>
+                      <a href={item.href} className="text-gray-300 text-sm font-medium hover:text-[#D4AF37] transition-colors">{item.value}</a>
                     ) : (
-                      <p className="text-slate-800 text-sm font-medium">{item.value}</p>
+                      <p className="text-gray-300 text-sm font-medium">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -109,14 +66,9 @@ const ContactPage = () => {
             </div>
 
             {/* WhatsApp CTA */}
-            <div
-              data-testid="contact-whatsapp-cta"
-              className="bg-[#FAFAFA] border border-slate-200 p-6"
-            >
-              <h3 className="font-serif text-lg text-slate-900 mb-2">
-                Prefer a Quick Chat?
-              </h3>
-              <p className="text-slate-500 text-sm mb-4">
+            <div data-testid="contact-whatsapp-cta" className="bg-[#2C2A33] border border-[#3A3843] p-6">
+              <h3 className="font-serif text-lg text-white mb-2">Prefer a Quick Chat?</h3>
+              <p className="text-gray-400 text-sm mb-4">
                 For bulk orders, corporate gifting, or urgent inquiries — reach us instantly on WhatsApp.
               </p>
               <a
@@ -134,41 +86,29 @@ const ContactPage = () => {
 
           {/* Contact Form */}
           <div>
-            <h2 className="font-serif text-2xl font-medium text-slate-900 mb-6">
-              Send a Message
-            </h2>
-            <div className="h-0.5 w-12 bg-[#B8944C] mb-8" />
+            <h2 className="font-serif text-2xl font-medium text-white mb-6">Send a Message</h2>
+            <div className="h-0.5 w-12 bg-[#D4AF37] mb-8" />
 
             {submitted ? (
               <div
                 data-testid="form-success-message"
-                className="text-center py-16 border border-green-200 bg-green-50"
+                className="text-center py-16 border border-[#D4AF37]/30 bg-[#2C2A33]"
               >
                 <div className="text-4xl mb-4">🎁</div>
-                <h3 className="font-serif text-xl text-slate-900 mb-2">
-                  Message Sent via WhatsApp!
-                </h3>
-                <p className="text-slate-500 text-sm">
-                  We'll get back to you shortly. Thank you for contacting Barqat!
-                </p>
+                <h3 className="font-serif text-xl text-white mb-2">Message Sent via WhatsApp!</h3>
+                <p className="text-gray-400 text-sm">We'll get back to you shortly. Thank you for contacting Barqat!</p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", subject: "", message: "" }); }}
-                  className="mt-5 px-6 py-2.5 bg-[#2D1648] text-white text-sm uppercase tracking-widest hover:bg-[#3D2060] transition-colors"
+                  className="mt-5 px-6 py-2.5 bg-[#D4AF37] text-[#1B1B1B] text-sm uppercase tracking-widest font-bold hover:bg-[#B8941F] transition-colors"
                 >
                   Send Another
                 </button>
               </div>
             ) : (
-              <form
-                data-testid="contact-form"
-                onSubmit={handleSubmit}
-                className="space-y-5"
-              >
+              <form data-testid="contact-form" onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-medium">
-                      Full Name *
-                    </label>
+                    <label className="block text-xs uppercase tracking-wider text-gray-500 mb-1.5 font-medium">Full Name *</label>
                     <input
                       data-testid="contact-name"
                       type="text"
@@ -177,13 +117,11 @@ const ContactPage = () => {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
+                      className="w-full px-4 py-3 border border-[#3A3843] text-sm outline-none focus:border-[#D4AF37] text-white bg-[#2C2A33] placeholder-gray-600 transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-medium">
-                      Phone Number
-                    </label>
+                    <label className="block text-xs uppercase tracking-wider text-gray-500 mb-1.5 font-medium">Phone Number</label>
                     <input
                       data-testid="contact-phone"
                       type="tel"
@@ -191,15 +129,13 @@ const ContactPage = () => {
                       value={form.phone}
                       onChange={handleChange}
                       placeholder="+91 99999 99999"
-                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
+                      className="w-full px-4 py-3 border border-[#3A3843] text-sm outline-none focus:border-[#D4AF37] text-white bg-[#2C2A33] placeholder-gray-600 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-medium">
-                    Email Address *
-                  </label>
+                  <label className="block text-xs uppercase tracking-wider text-gray-500 mb-1.5 font-medium">Email Address *</label>
                   <input
                     data-testid="contact-email"
                     type="email"
@@ -208,20 +144,18 @@ const ContactPage = () => {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
+                    className="w-full px-4 py-3 border border-[#3A3843] text-sm outline-none focus:border-[#D4AF37] text-white bg-[#2C2A33] placeholder-gray-600 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-medium">
-                    Subject
-                  </label>
+                  <label className="block text-xs uppercase tracking-wider text-gray-500 mb-1.5 font-medium">Subject</label>
                   <select
                     data-testid="contact-subject"
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
+                    className="w-full px-4 py-3 border border-[#3A3843] text-sm text-gray-300 outline-none focus:border-[#D4AF37] bg-[#2C2A33] transition-colors"
                   >
                     <option value="">Select a subject</option>
                     <option>General Inquiry</option>
@@ -233,9 +167,7 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-medium">
-                    Message *
-                  </label>
+                  <label className="block text-xs uppercase tracking-wider text-gray-500 mb-1.5 font-medium">Message *</label>
                   <textarea
                     data-testid="contact-message"
                     name="message"
@@ -244,21 +176,19 @@ const ContactPage = () => {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell us about your requirement..."
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-[#3A3843] text-sm outline-none focus:border-[#D4AF37] text-white bg-[#2C2A33] placeholder-gray-600 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   data-testid="contact-submit-btn"
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[#2D1648] text-white py-4 text-sm uppercase tracking-widest font-semibold hover:bg-[#3D2060] transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-[#D4AF37] text-[#1B1B1B] py-4 text-sm uppercase tracking-widest font-bold hover:bg-[#B8941F] transition-colors"
                 >
                   <Send size={16} />
                   Send via WhatsApp
                 </button>
-                <p className="text-xs text-slate-400 text-center">
-                  Your message will open in WhatsApp for quick response
-                </p>
+                <p className="text-xs text-gray-600 text-center">Your message will open in WhatsApp for quick response</p>
               </form>
             )}
           </div>
