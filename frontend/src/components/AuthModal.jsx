@@ -26,15 +26,16 @@ const AuthModal = ({ open, onClose }) => {
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent
         data-testid="auth-modal"
+        aria-describedby="auth-modal-description"
         className="bg-white p-0 max-w-md w-full border-0 shadow-2xl overflow-hidden"
       >
         {/* Top accent bar */}
-        <div className="h-1 w-full bg-gradient-to-r from-[#7F1D1D] via-[#D4AF37] to-[#1E3A8A]" />
+        <div className="h-1 w-full bg-gradient-to-r from-[#2D1648] via-[#E8D5A3] to-[#3D2060]" />
 
         <div className="px-8 pt-6 pb-8">
           <DialogHeader className="mb-6">
             <div className="text-center">
-              <p className="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-bold mb-2">
+              <p className="text-xs uppercase tracking-[0.25em] text-[#E8D5A3] font-bold mb-2">
                 Barqat Luxury Gifting
               </p>
               <DialogTitle className="font-serif text-2xl text-slate-900">
@@ -58,7 +59,7 @@ const AuthModal = ({ open, onClose }) => {
               onClick={() => setMode("login")}
               className={`flex-1 py-2.5 text-sm font-medium uppercase tracking-wider transition-colors ${
                 mode === "login"
-                  ? "bg-[#7F1D1D] text-white"
+                  ? "bg-[#2D1648] text-white"
                   : "text-slate-600 hover:text-slate-900 bg-white"
               }`}
             >
@@ -69,7 +70,7 @@ const AuthModal = ({ open, onClose }) => {
               onClick={() => setMode("register")}
               className={`flex-1 py-2.5 text-sm font-medium uppercase tracking-wider transition-colors ${
                 mode === "register"
-                  ? "bg-[#7F1D1D] text-white"
+                  ? "bg-[#2D1648] text-white"
                   : "text-slate-600 hover:text-slate-900 bg-white"
               }`}
             >
@@ -92,7 +93,7 @@ const AuthModal = ({ open, onClose }) => {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your full name"
-                  className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                  className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
                 />
               </div>
             )}
@@ -110,7 +111,7 @@ const AuthModal = ({ open, onClose }) => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="your@email.com"
-                className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
               />
             </div>
 
@@ -128,7 +129,7 @@ const AuthModal = ({ open, onClose }) => {
                   value={form.password}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors pr-12"
+                  className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors pr-12"
                 />
                 <button
                   type="button"
@@ -144,7 +145,7 @@ const AuthModal = ({ open, onClose }) => {
               <div className="text-right">
                 <button
                   type="button"
-                  className="text-xs text-[#1E3A8A] hover:text-[#7F1D1D] transition-colors"
+                  className="text-xs text-[#3D2060] hover:text-[#2D1648] transition-colors"
                 >
                   Forgot Password?
                 </button>
@@ -154,7 +155,7 @@ const AuthModal = ({ open, onClose }) => {
             <button
               data-testid="auth-submit-btn"
               type="submit"
-              className="w-full bg-[#7F1D1D] text-white py-3.5 text-sm uppercase tracking-widest font-semibold hover:bg-[#991B1B] transition-colors mt-2"
+              className="w-full bg-[#2D1648] text-white py-3.5 text-sm uppercase tracking-widest font-semibold hover:bg-[#3D2060] transition-colors mt-2"
             >
               {mode === "login" ? "Sign In" : "Create Account"}
             </button>
@@ -164,7 +165,7 @@ const AuthModal = ({ open, onClose }) => {
             {mode === "login" ? "Don't have an account? " : "Already have an account? "}
             <button
               onClick={() => setMode(mode === "login" ? "register" : "login")}
-              className="text-[#7F1D1D] font-medium hover:underline"
+              className="text-[#2D1648] font-medium hover:underline"
             >
               {mode === "login" ? "Register here" : "Login here"}
             </button>

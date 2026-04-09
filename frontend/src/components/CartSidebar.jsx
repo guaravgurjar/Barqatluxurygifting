@@ -51,7 +51,7 @@ const CartSidebar = () => {
               )}
             </SheetTitle>
           </div>
-          <div className="w-12 h-0.5 bg-[#D4AF37] mt-1" />
+          <div className="w-12 h-0.5 bg-[#E8D5A3] mt-1" />
         </SheetHeader>
 
         {/* Cart Items */}
@@ -68,7 +68,7 @@ const CartSidebar = () => {
               </p>
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="mt-6 px-6 py-2.5 bg-[#7F1D1D] text-white text-sm uppercase tracking-widest hover:bg-[#991B1B] transition-colors"
+                className="mt-6 px-6 py-2.5 bg-[#2D1648] text-white text-sm uppercase tracking-widest hover:bg-[#3D2060] transition-colors"
               >
                 Shop Now
               </button>
@@ -90,7 +90,7 @@ const CartSidebar = () => {
                     <p className="text-sm font-medium text-slate-900 line-clamp-2 leading-snug font-serif">
                       {item.name}
                     </p>
-                    <p className="text-sm text-[#7F1D1D] font-semibold mt-1">
+                    <p className="text-sm text-[#2D1648] font-semibold mt-1">
                       {formatPrice(item.price)}
                     </p>
 
@@ -101,7 +101,7 @@ const CartSidebar = () => {
                           data-testid={`decrease-qty-${item.id}`}
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           disabled={item.quantity <= 1}
-                          className="p-1.5 text-slate-500 hover:text-[#7F1D1D] disabled:opacity-30 transition-colors"
+                          className="p-1.5 text-slate-500 hover:text-[#2D1648] disabled:opacity-30 transition-colors"
                         >
                           <Minus size={12} />
                         </button>
@@ -114,7 +114,7 @@ const CartSidebar = () => {
                         <button
                           data-testid={`increase-qty-${item.id}`}
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-1.5 text-slate-500 hover:text-[#7F1D1D] transition-colors"
+                          className="p-1.5 text-slate-500 hover:text-[#2D1648] transition-colors"
                         >
                           <Plus size={12} />
                         </button>
@@ -170,7 +170,7 @@ const CartSidebar = () => {
               </span>
               <span
                 data-testid="cart-total"
-                className="text-lg font-bold text-[#7F1D1D]"
+                className="text-lg font-bold text-[#2D1648]"
               >
                 {formatPrice(subtotal >= 5000 ? subtotal : subtotal + 299)}
               </span>

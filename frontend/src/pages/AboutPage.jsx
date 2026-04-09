@@ -3,22 +3,22 @@ import { Heart, Award, Users, Leaf } from "lucide-react";
 
 const VALUES = [
   {
-    icon: <Heart size={22} className="text-[#D4AF37]" />,
+    icon: <Heart size={22} className="text-[#B8944C]" />,
     title: "Crafted with Love",
     desc: "Each hamper is assembled by hand, ensuring every detail reflects warmth and care.",
   },
   {
-    icon: <Award size={22} className="text-[#D4AF37]" />,
+    icon: <Award size={22} className="text-[#B8944C]" />,
     title: "Premium Quality",
     desc: "We source only the finest, certified-safe products from trusted artisans and vendors.",
   },
   {
-    icon: <Users size={22} className="text-[#D4AF37]" />,
+    icon: <Users size={22} className="text-[#B8944C]" />,
     title: "Community First",
     desc: "We partner with local artisans and small businesses to create meaningful livelihoods.",
   },
   {
-    icon: <Leaf size={22} className="text-[#D4AF37]" />,
+    icon: <Leaf size={22} className="text-[#B8944C]" />,
     title: "Eco-Conscious",
     desc: "Our Holi hampers use organic, skin-safe colors and recyclable packaging.",
   },
@@ -28,7 +28,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
-      <div className="relative bg-[#0F172A] overflow-hidden">
+      <div className="relative bg-[#1A0D2E] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/9l05ebp9_Poduct%20%285%29.jpeg"
@@ -37,12 +37,12 @@ const AboutPage = () => {
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#E8D5A3] font-bold mb-4">
             Our Story
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-tight mb-6">
             About Barqat
-            <span className="block text-[#D4AF37]">Luxury Gifting</span>
+            <span className="block text-[#E8D5A3]">Luxury Gifting</span>
           </h1>
           <p className="text-white/70 text-base max-w-2xl mx-auto leading-relaxed">
             Where Indian tradition meets contemporary luxury gifting — celebrating every festival with elegance, color, and heartfelt joy.
@@ -58,13 +58,13 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-4">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#E8D5A3] font-bold mb-4">
                 Who We Are
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-6">
                 Born from a Passion for Celebration
               </h2>
-              <div className="h-0.5 w-16 bg-[#D4AF37] mb-8" />
+              <div className="h-0.5 w-16 bg-[#B8944C] mb-8" />
               <div className="space-y-5 text-slate-600 text-base leading-relaxed">
                 <p>
                   Barqat Luxury Gifting was born from a simple belief: every celebration deserves to be extraordinary. Founded in India, we began by crafting Holi hampers that captured the true spirit of the festival — vibrant, joyful, and beautifully presented.
@@ -78,7 +78,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#D4AF37]/30" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#E8D5A3]/30" />
               <img
                 src="https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/qm2euvfg_Poduct%20%282%29.jpeg"
                 alt="Barqat Hamper Crafting"
@@ -96,16 +96,16 @@ const AboutPage = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#E8D5A3] font-bold mb-3">
               What Drives Us
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-4">
               Our Core Values
             </h2>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-16 bg-[#D4AF37]" />
-              <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-              <div className="h-px w-16 bg-[#D4AF37]" />
+              <div className="h-px w-16 bg-[#B8944C]" />
+              <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
+              <div className="h-px w-16 bg-[#B8944C]" />
             </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -114,7 +114,7 @@ const AboutPage = () => {
                 key={val.title}
                 className="bg-white p-8 border border-slate-100 text-center hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 mx-auto mb-4 border border-[#D4AF37]/30 flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-4 border border-[#B8944C]/40 flex items-center justify-center">
                   {val.icon}
                 </div>
                 <h3 className="font-serif text-lg text-slate-900 mb-2">{val.title}</h3>
@@ -126,7 +126,7 @@ const AboutPage = () => {
       </section>
 
       {/* Stats Banner */}
-      <section className="py-16 bg-[#7F1D1D]">
+      <section className="py-16 bg-[#2D1648]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -136,7 +136,7 @@ const AboutPage = () => {
               { value: "4.9/5", label: "Customer Rating" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-serif text-3xl sm:text-4xl font-semibold text-[#D4AF37]">
+                <p className="font-serif text-3xl sm:text-4xl font-semibold text-[#E8D5A3]">
                   {stat.value}
                 </p>
                 <p className="text-white/70 text-sm uppercase tracking-wider mt-2">

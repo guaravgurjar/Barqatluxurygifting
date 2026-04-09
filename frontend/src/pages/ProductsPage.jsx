@@ -26,16 +26,16 @@ const ProductsPage = () => {
       {/* Page Header */}
       <div className="bg-[#FAFAFA] border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-3">
             Shop All
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl font-medium text-slate-900 mb-4">
             The Festive Collection
           </h1>
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-16 bg-[#D4AF37]" />
-            <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-            <div className="h-px w-16 bg-[#D4AF37]" />
+            <div className="h-px w-16 bg-[#B8944C]" />
+            <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
+            <div className="h-px w-16 bg-[#B8944C]" />
           </div>
           <p className="text-slate-500 text-base max-w-lg mx-auto">
             Explore our complete range of premium Holi hampers and festive gift collections.
@@ -61,7 +61,7 @@ const ProductsPage = () => {
               placeholder="Search hampers..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-4 py-2.5 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white"
+              className="w-full pl-9 pr-4 py-2.5 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white"
             />
           </div>
 
@@ -71,7 +71,7 @@ const ProductsPage = () => {
               data-testid="sort-select"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border border-slate-200 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-[#7F1D1D] bg-white cursor-pointer"
+              className="border border-slate-200 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-[#2D1648] bg-white cursor-pointer"
             >
               <option value="default">Sort: Featured</option>
               <option value="price-asc">Price: Low to High</option>
@@ -106,7 +106,7 @@ const ProductsPage = () => {
             </p>
             <button
               onClick={() => setSearch("")}
-              className="mt-5 px-6 py-2.5 bg-[#7F1D1D] text-white text-sm uppercase tracking-widest hover:bg-[#991B1B] transition-colors"
+              className="mt-5 px-6 py-2.5 bg-[#2D1648] text-white text-sm uppercase tracking-widest hover:bg-[#3D2060] transition-colors"
             >
               Clear Search
             </button>

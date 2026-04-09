@@ -38,7 +38,7 @@ html {
 
 /* Gold shimmer for accent text */
 .gold-shimmer {
-  background: linear-gradient(90deg, #D4AF37, #f5d76e, #D4AF37);
+  background: linear-gradient(90deg, #E8D5A3, #f5d76e, #E8D5A3);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -92,6 +92,6 @@ html {
   content: '';
   flex: 1;
   height: 1px;
-  background: #D4AF37;
+  background: #E8D5A3;
   max-width: 60px;
 }

@@ -6,22 +6,22 @@ import { PRODUCTS, WHATSAPP_NUMBER } from "../data/products";
 
 const FEATURES = [
   {
-    icon: <Gift size={22} className="text-[#D4AF37]" />,
+    icon: <Gift size={22} className="text-[#E8D5A3]" />,
     title: "Premium Curation",
     desc: "Every hamper is hand-crafted with premium, artisan-sourced products.",
   },
   {
-    icon: <Truck size={22} className="text-[#D4AF37]" />,
+    icon: <Truck size={22} className="text-[#E8D5A3]" />,
     title: "Pan-India Delivery",
     desc: "Safe, fast delivery to your doorstep across India.",
   },
   {
-    icon: <Shield size={22} className="text-[#D4AF37]" />,
+    icon: <Shield size={22} className="text-[#E8D5A3]" />,
     title: "100% Safe Colors",
     desc: "All Holi hampers include certified skin-safe, organic colors.",
   },
   {
-    icon: <Star size={22} className="text-[#D4AF37]" />,
+    icon: <Star size={22} className="text-[#E8D5A3]" />,
     title: "Customizable",
     desc: "Personalize any hamper with a custom message or branding.",
   },
@@ -58,22 +58,22 @@ const HomePage = () => {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#7F1D1D]/5" />
-          <div className="absolute bottom-0 left-10 w-32 h-32 border border-[#D4AF37]/20 rotate-45 translate-y-16" />
-          <div className="absolute top-10 right-20 w-20 h-20 border border-[#D4AF37]/15 rotate-12" />
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#2D1648]/5" />
+          <div className="absolute bottom-0 left-10 w-32 h-32 border border-[#E8D5A3]/20 rotate-45 translate-y-16" />
+          <div className="absolute top-10 right-20 w-20 h-20 border border-[#E8D5A3]/15 rotate-12" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-0">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div className="text-center md:text-left">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-4">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-4">
                 Premium Festive Gifting
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-slate-900 leading-tight mb-6">
                 Celebrate Every
-                <span className="block text-[#7F1D1D]">Festival</span>
-                <span className="block text-[#1E3A8A]">in Luxury</span>
+                <span className="block text-[#2D1648]">Festival</span>
+                <span className="block text-[#3D2060]">in Luxury</span>
               </h1>
               <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
                 Exquisite Holi hampers and festive gift collections crafted with love, elegance, and the finest artisan products. Perfect for family, friends, and corporate gifting.
@@ -82,7 +82,7 @@ const HomePage = () => {
                 <Link
                   data-testid="hero-shop-btn"
                   to="/collections"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7F1D1D] text-white text-sm uppercase tracking-widest font-medium hover:bg-[#991B1B] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#2D1648] text-white text-sm uppercase tracking-widest font-medium hover:bg-[#3D2060] transition-colors"
                 >
                   Explore Collection
                   <ArrowRight size={16} />
@@ -107,7 +107,7 @@ const HomePage = () => {
                   { label: "Cities Served", value: "100+" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center md:text-left">
-                    <p className="text-2xl font-serif font-semibold text-[#7F1D1D]">
+                    <p className="text-2xl font-serif font-semibold text-[#2D1648]">
                       {stat.value}
                     </p>
                     <p className="text-xs text-slate-500 uppercase tracking-wider mt-0.5">
@@ -120,7 +120,7 @@ const HomePage = () => {
 
             {/* Hero Image */}
             <div className="relative hidden md:block">
-              <div className="absolute -top-4 -right-4 w-full h-full border-2 border-[#D4AF37]/30" />
+              <div className="absolute -top-4 -right-4 w-full h-full border-2 border-[#E8D5A3]/30" />
               <img
                 src="https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/0lrp8l59_Poduct%20%283%29.jpeg"
                 alt="Barqat Premium Holi Hamper"
@@ -128,13 +128,13 @@ const HomePage = () => {
               />
               {/* Floating badge */}
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm shadow-xl px-5 py-4 z-20">
-                <p className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold">
+                <p className="text-[10px] uppercase tracking-widest text-[#E8D5A3] font-bold">
                   Featured
                 </p>
                 <p className="text-base font-serif font-semibold text-slate-900 mt-0.5">
                   Premium Holi Luxury Box
                 </p>
-                <p className="text-[#7F1D1D] font-bold text-lg mt-1">₹15,499</p>
+                <p className="text-[#2D1648] font-bold text-lg mt-1">₹15,499</p>
               </div>
             </div>
           </div>
@@ -149,16 +149,16 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-14">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-3">
               Handcrafted with Love
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-4">
               Featured Hampers
             </h2>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-16 bg-[#D4AF37]" />
-              <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-              <div className="h-px w-16 bg-[#D4AF37]" />
+              <div className="h-px w-16 bg-[#B8944C]" />
+              <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
+              <div className="h-px w-16 bg-[#B8944C]" />
             </div>
             <p className="text-slate-500 text-base max-w-xl mx-auto mt-5 leading-relaxed">
               Each hamper is carefully curated to bring joy, color, and festive cheer to your loved ones.
@@ -182,7 +182,7 @@ const HomePage = () => {
             <Link
               data-testid="view-all-collections-btn"
               to="/collections"
-              className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#7F1D1D] text-[#7F1D1D] text-sm uppercase tracking-widest font-medium hover:bg-[#7F1D1D] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#2D1648] text-[#2D1648] text-sm uppercase tracking-widest font-medium hover:bg-[#2D1648] hover:text-white transition-colors"
             >
               View Full Collection
               <ArrowRight size={15} />
@@ -194,29 +194,29 @@ const HomePage = () => {
       {/* Why Choose Us */}
       <section
         data-testid="why-choose-section"
-        className="py-20 lg:py-28 bg-[#0F172A]"
+        className="py-20 lg:py-28 bg-[#1A0D2E]"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#E8D5A3] font-bold mb-3">
               Our Promise
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-white mb-4">
               Why Choose Barqat?
             </h2>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-16 bg-[#D4AF37]" />
-              <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-              <div className="h-px w-16 bg-[#D4AF37]" />
+              <div className="h-px w-16 bg-[#E8D5A3]" />
+              <div className="w-2 h-2 bg-[#E8D5A3] rotate-45" />
+              <div className="h-px w-16 bg-[#E8D5A3]" />
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {FEATURES.map((feat) => (
               <div
                 key={feat.title}
-                className="text-center p-6 border border-slate-800 hover:border-[#D4AF37]/40 transition-colors group"
+                className="text-center p-6 border border-slate-800 hover:border-[#E8D5A3]/40 transition-colors group"
               >
-                <div className="w-12 h-12 mx-auto mb-4 border border-slate-700 flex items-center justify-center group-hover:border-[#D4AF37]/50 transition-colors">
+                <div className="w-12 h-12 mx-auto mb-4 border border-slate-700 flex items-center justify-center group-hover:border-[#E8D5A3]/50 transition-colors">
                   {feat.icon}
                 </div>
                 <h3 className="font-serif text-lg text-white mb-2">{feat.title}</h3>
@@ -234,16 +234,16 @@ const HomePage = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-3">
               Happy Customers
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-slate-900 mb-4">
               What They Say
             </h2>
             <div className="flex items-center justify-center gap-3">
-              <div className="h-px w-16 bg-[#D4AF37]" />
-              <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-              <div className="h-px w-16 bg-[#D4AF37]" />
+              <div className="h-px w-16 bg-[#B8944C]" />
+              <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
+              <div className="h-px w-16 bg-[#B8944C]" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -254,14 +254,14 @@ const HomePage = () => {
               >
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} size={14} fill="#D4AF37" className="text-[#D4AF37]" />
+                    <Star key={i} size={14} fill="#B8944C" className="text-[#B8944C]" />
                   ))}
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed mb-5 italic">
                   "{t.text}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 bg-[#7F1D1D] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                  <div className="w-9 h-9 bg-[#2D1648] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                     {t.name[0]}
                   </div>
                   <div>
@@ -276,9 +276,9 @@ const HomePage = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-16 bg-[#7F1D1D]">
+      <section className="py-16 bg-[#2D1648]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-bold mb-4">
+          <p className="text-[#E8D5A3] text-xs uppercase tracking-[0.3em] font-bold mb-4">
             Corporate & Bulk Orders
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl text-white font-medium mb-5">

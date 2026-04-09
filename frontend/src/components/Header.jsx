@@ -28,7 +28,7 @@ const Header = () => {
         className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-xl border-b border-slate-200 transition-all"
       >
         {/* Top announcement bar */}
-        <div className="bg-[#7F1D1D] text-white text-center text-xs py-2 tracking-widest uppercase font-medium">
+        <div className="bg-[#2D1648] text-[#E8D5A3] text-center text-xs py-2 tracking-widest uppercase font-medium">
           Free Delivery on Orders Above ₹5,000 &nbsp;|&nbsp; Premium Festive Gifting
         </div>
 
@@ -36,20 +36,12 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
 
             {/* Logo */}
-            <Link to="/" data-testid="logo-link" className="flex items-center gap-3 flex-shrink-0">
+            <Link to="/" data-testid="logo-link" className="flex items-center flex-shrink-0">
               <img
-                src="https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/4jktw50b_Poduct%20%281%29.jpeg"
+                src="https://customer-assets.emergentagent.com/job_premium-hampers-10/artifacts/xpztwi5k_logobae.jpeg"
                 alt="Barqat Luxury Gifting Logo"
-                className="w-10 h-10 object-cover rounded-full border-2 border-[#D4AF37]"
+                className="h-12 w-auto object-contain"
               />
-              <div className="leading-tight">
-                <span className="block font-serif text-lg font-semibold text-[#7F1D1D] tracking-wide">
-                  Barqat
-                </span>
-                <span className="block text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] font-bold -mt-1">
-                  Luxury Gifting
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -60,8 +52,8 @@ const Header = () => {
                   to={link.path}
                   className={`text-sm font-medium transition-colors duration-200 uppercase tracking-wider ${
                     isActive(link.path)
-                      ? "text-[#7F1D1D] border-b-2 border-[#D4AF37] pb-0.5"
-                      : "text-slate-700 hover:text-[#7F1D1D]"
+                      ? "text-[#2D1648] border-b-2 border-[#B8944C] pb-0.5"
+                      : "text-slate-700 hover:text-[#2D1648]"
                   }`}
                 >
                   {link.label}
@@ -84,7 +76,7 @@ const Header = () => {
                   />
                   <button
                     onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-                    className="px-2 py-1.5 text-slate-500 hover:text-[#7F1D1D]"
+                    className="px-2 py-1.5 text-slate-500 hover:text-[#2D1648]"
                   >
                     <X size={16} />
                   </button>
@@ -93,7 +85,7 @@ const Header = () => {
                 <button
                   data-testid="search-btn"
                   onClick={() => setSearchOpen(true)}
-                  className="hidden md:flex text-slate-700 hover:text-[#7F1D1D] transition-colors p-1.5"
+                  className="hidden md:flex text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
                   aria-label="Search"
                 >
                   <Search size={20} />
@@ -104,7 +96,7 @@ const Header = () => {
               <button
                 data-testid="auth-btn"
                 onClick={() => setAuthOpen(true)}
-                className="hidden md:flex items-center gap-1.5 text-sm text-slate-700 hover:text-[#7F1D1D] transition-colors font-medium"
+                className="hidden md:flex items-center gap-1.5 text-sm text-slate-700 hover:text-[#2D1648] transition-colors font-medium"
               >
                 <User size={18} />
                 <span className="text-xs uppercase tracking-wider">Login</span>
@@ -114,14 +106,14 @@ const Header = () => {
               <button
                 data-testid="cart-btn"
                 onClick={() => setIsCartOpen(true)}
-                className="relative flex items-center text-slate-700 hover:text-[#7F1D1D] transition-colors p-1.5"
+                className="relative flex items-center text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
                 aria-label="Open cart"
               >
                 <ShoppingBag size={22} />
                 {totalItems > 0 && (
                   <span
                     data-testid="cart-badge"
-                    className="absolute -top-1 -right-1 bg-[#7F1D1D] text-white text-[10px] font-bold rounded-full w-4.5 h-4.5 min-w-[18px] min-h-[18px] flex items-center justify-center leading-none px-1"
+                    className="absolute -top-1 -right-1 bg-[#2D1648] text-white text-[10px] font-bold rounded-full w-4.5 h-4.5 min-w-[18px] min-h-[18px] flex items-center justify-center leading-none px-1"
                   >
                     {totalItems}
                   </span>
@@ -132,7 +124,7 @@ const Header = () => {
               <button
                 data-testid="mobile-menu-btn"
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="md:hidden text-slate-700 hover:text-[#7F1D1D] transition-colors p-1.5"
+                className="md:hidden text-slate-700 hover:text-[#2D1648] transition-colors p-1.5"
                 aria-label="Toggle menu"
               >
                 {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -161,7 +153,7 @@ const Header = () => {
                   onClick={() => setMenuOpen(false)}
                   className={`text-sm font-medium uppercase tracking-wider py-2 px-1 border-b border-slate-100 ${
                     isActive(link.path)
-                      ? "text-[#7F1D1D]"
+                      ? "text-[#2D1648]"
                       : "text-slate-700"
                   }`}
                 >

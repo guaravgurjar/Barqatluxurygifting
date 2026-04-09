@@ -32,16 +32,16 @@ const ContactPage = () => {
       {/* Page Header */}
       <div className="bg-[#FAFAFA] border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-bold mb-3">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#B8944C] font-bold mb-3">
             Reach Out
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl font-medium text-slate-900 mb-4">
             Get in Touch
           </h1>
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-16 bg-[#D4AF37]" />
-            <div className="w-2 h-2 bg-[#D4AF37] rotate-45" />
-            <div className="h-px w-16 bg-[#D4AF37]" />
+            <div className="h-px w-16 bg-[#B8944C]" />
+            <div className="w-2 h-2 bg-[#B8944C] rotate-45" />
+            <div className="h-px w-16 bg-[#B8944C]" />
           </div>
           <p className="text-slate-500 text-base max-w-lg mx-auto">
             Questions, bulk orders, or custom requests? We'd love to hear from you.
@@ -56,37 +56,37 @@ const ContactPage = () => {
             <h2 className="font-serif text-2xl font-medium text-slate-900 mb-6">
               Contact Information
             </h2>
-            <div className="h-0.5 w-12 bg-[#D4AF37] mb-8" />
+            <div className="h-0.5 w-12 bg-[#B8944C] mb-8" />
 
             <div className="space-y-6 mb-10">
               {[
                 {
-                  icon: <Phone size={18} className="text-[#D4AF37]" />,
+                  icon: <Phone size={18} className="text-[#B8944C]" />,
                   label: "Phone / WhatsApp",
                   value: "+91 93513 06182",
                   href: `tel:+${WHATSAPP_NUMBER}`,
                 },
                 {
-                  icon: <Mail size={18} className="text-[#D4AF37]" />,
+                  icon: <Mail size={18} className="text-[#B8944C]" />,
                   label: "Email",
                   value: "hello@barqatluxury.com",
                   href: "mailto:hello@barqatluxury.com",
                 },
                 {
-                  icon: <MapPin size={18} className="text-[#D4AF37]" />,
+                  icon: <MapPin size={18} className="text-[#B8944C]" />,
                   label: "Location",
                   value: "India — Pan India Delivery Available",
                   href: null,
                 },
                 {
-                  icon: <Clock size={18} className="text-[#D4AF37]" />,
+                  icon: <Clock size={18} className="text-[#B8944C]" />,
                   label: "Business Hours",
                   value: "Monday – Saturday, 9 AM – 7 PM",
                   href: null,
                 },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4 items-start">
-                  <div className="w-10 h-10 border border-[#D4AF37]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-10 h-10 border border-[#B8944C]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                     {item.icon}
                   </div>
                   <div>
@@ -96,7 +96,7 @@ const ContactPage = () => {
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-slate-800 text-sm font-medium hover:text-[#7F1D1D] transition-colors"
+                        className="text-slate-800 text-sm font-medium hover:text-[#2D1648] transition-colors"
                       >
                         {item.value}
                       </a>
@@ -137,7 +137,7 @@ const ContactPage = () => {
             <h2 className="font-serif text-2xl font-medium text-slate-900 mb-6">
               Send a Message
             </h2>
-            <div className="h-0.5 w-12 bg-[#D4AF37] mb-8" />
+            <div className="h-0.5 w-12 bg-[#B8944C] mb-8" />
 
             {submitted ? (
               <div
@@ -153,7 +153,7 @@ const ContactPage = () => {
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", subject: "", message: "" }); }}
-                  className="mt-5 px-6 py-2.5 bg-[#7F1D1D] text-white text-sm uppercase tracking-widest hover:bg-[#991B1B] transition-colors"
+                  className="mt-5 px-6 py-2.5 bg-[#2D1648] text-white text-sm uppercase tracking-widest hover:bg-[#3D2060] transition-colors"
                 >
                   Send Another
                 </button>
@@ -177,7 +177,7 @@ const ContactPage = () => {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
                     />
                   </div>
                   <div>
@@ -191,7 +191,7 @@ const ContactPage = () => {
                       value={form.phone}
                       onChange={handleChange}
                       placeholder="+91 99999 99999"
-                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                      className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
                     />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ const ContactPage = () => {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
                   />
                 </div>
 
@@ -221,7 +221,7 @@ const ContactPage = () => {
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors"
+                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors"
                   >
                     <option value="">Select a subject</option>
                     <option>General Inquiry</option>
@@ -244,14 +244,14 @@ const ContactPage = () => {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell us about your requirement..."
-                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#7F1D1D] text-slate-800 bg-white transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-slate-200 text-sm outline-none focus:border-[#2D1648] text-slate-800 bg-white transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   data-testid="contact-submit-btn"
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[#7F1D1D] text-white py-4 text-sm uppercase tracking-widest font-semibold hover:bg-[#991B1B] transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-[#2D1648] text-white py-4 text-sm uppercase tracking-widest font-semibold hover:bg-[#3D2060] transition-colors"
                 >
                   <Send size={16} />
                   Send via WhatsApp
