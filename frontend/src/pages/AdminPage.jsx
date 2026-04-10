@@ -126,14 +126,43 @@ const LoginScreen = ({ onLogin }) => {
   );
 };
 
+// ── Google Drive URL converter ─────────────────────────────────────────────
+function convertImageUrl(url) {
+  if (!url) return url;
+  // Google Drive: https://drive.google.com/file/d/FILE_ID/view?...
+  const driveFileMatch = url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (driveFileMatch) {
+    // thumbnail format is more reliable for display
+    return `https://drive.google.com/thumbnail?id=${driveFileMatch[1]}&sz=w800`;
+  }
+  // Google Drive open: https://drive.google.com/open?id=FILE_ID
+  const driveOpenMatch = url.match(/drive\.google\.com\/open\?id=([a-zA-Z0-9_-]+)/);
+  if (driveOpenMatch) {
+    return `https://drive.google.com/thumbnail?id=${driveOpenMatch[1]}&sz=w800`;
+  }
+  // Already a drive thumbnail/uc link — normalise to thumbnail
+  const driveUcMatch = url.match(/drive\.google\.com\/uc\?.*id=([a-zA-Z0-9_-]+)/);
+  if (driveUcMatch) {
+    return `https://drive.google.com/thumbnail?id=${driveUcMatch[1]}&sz=w800`;
+  }
+  return url;
+}
+
 // ── Product Form Modal ─────────────────────────────────────────────────────
 const ProductFormModal = ({ product, onClose, onSave, token }) => {
   const [form, setForm] = useState(product ? { ...product, price: String(product.price) } : emptyForm);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [imgError, setImgError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    if (name === "image") {
+      const converted = convertImageUrl(value);
+      setImgError(false);
+      setForm((p) => ({ ...p, image: converted }));
+      return;
+    }
     setForm((p) => ({ ...p, [name]: type === "checkbox" ? checked : value }));
   };
 
@@ -226,24 +255,70 @@ const ProductFormModal = ({ product, onClose, onSave, token }) => {
 
           {/* Image URL */}
           <div>
-            <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">Image URL *</label>
+            <label className="block text-xs uppercase tracking-wider text-gray-400 mb-1.5 font-medium">
+              Image URL *
+            </label>
             <input
               data-testid="product-image-input"
               name="image"
               value={form.image}
               onChange={handleChange}
               required
-              placeholder="https://... (paste your image URL)"
+              placeholder="https://... or paste a Google Drive link"
               className="w-full px-4 py-3 border border-[#3A3843] bg-[#1B1B1B] text-white text-sm outline-none focus:border-[#D4AF37] placeholder-gray-600"
             />
+
+            {/* Image Preview */}
             {form.image && (
-              <div className="mt-2 relative w-20 h-20 border border-[#3A3843] overflow-hidden">
-                <img src={form.image} alt="Preview" className="w-full h-full object-cover" onError={(e) => { e.target.style.display = "none"; }} />
+              <div className="mt-3 flex items-start gap-4">
+                <div className="w-24 h-24 border border-[#3A3843] overflow-hidden flex-shrink-0 bg-[#1B1B1B] flex items-center justify-center">
+                  {imgError ? (
+                    <div className="text-center p-2">
+                      <XCircle size={20} className="text-red-400 mx-auto mb-1" />
+                      <p className="text-red-400 text-[10px]">Invalid URL</p>
+                    </div>
+                  ) : (
+                    <img
+                      src={form.image}
+                      alt="Preview"
+                      className="w-full h-full object-cover"
+                      onError={() => setImgError(true)}
+                      onLoad={() => setImgError(false)}
+                    />
+                  )}
+                </div>
+                <div className="text-xs text-gray-500 leading-relaxed pt-1">
+                  {imgError ? (
+                    <p className="text-red-400">Image couldn't load. Check the URL is a direct image link.</p>
+                  ) : (
+                    <p className="text-green-400 flex items-center gap-1">
+                      <CheckCircle size={12} /> Image preview looks good!
+                    </p>
+                  )}
+                </div>
               </div>
             )}
-            <p className="text-xs text-gray-600 mt-1.5 flex items-center gap-1">
-              <Upload size={11} /> Upload your image to an image hosting service and paste the URL here
-            </p>
+
+            {/* Tips */}
+            <div className="mt-3 bg-[#1B1B1B] border border-[#3A3843] p-3 space-y-1.5">
+              <p className="text-xs text-[#D4AF37] font-bold uppercase tracking-wider mb-2">How to use images:</p>
+              <p className="text-xs text-gray-300 font-medium mb-1">Google Drive (recommended):</p>
+              <ol className="text-xs text-gray-400 space-y-1 pl-3 mb-3">
+                <li>1. Open your image in Google Drive</li>
+                <li>2. Click <span className="text-white">Share</span> → set to <span className="text-green-400">"Anyone with the link"</span></li>
+                <li>3. Copy the link and paste it here — it auto-converts!</li>
+              </ol>
+              <div className="border-t border-[#3A3843] pt-2 space-y-1">
+                <p className="text-xs text-gray-400 flex items-center gap-2">
+                  <CheckCircle size={11} className="text-green-400 flex-shrink-0" />
+                  <span><span className="text-white">imgbb.com</span> — free image hosting, no sign-in needed</span>
+                </p>
+                <p className="text-xs text-gray-400 flex items-center gap-2">
+                  <CheckCircle size={11} className="text-green-400 flex-shrink-0" />
+                  <span><span className="text-white">Any direct .jpg / .png / .webp URL</span> also works</span>
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Description */}
