@@ -7,6 +7,7 @@ import {
 import ProductCard from "../components/ProductCard";
 import { useProducts } from "../hooks/useProducts";
 import { WHATSAPP_NUMBER } from "../data/products";
+import InstagramFeed from "../components/InstagramFeed";
 
 const SERVICES = [
   {
@@ -410,6 +411,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* ── INSTAGRAM FEED ───────────────────────────────────── */}
+      <InstagramFeed />
+
     </div>
   );
 };
